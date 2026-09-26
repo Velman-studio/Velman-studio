@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="theme-color" content="#070914">
+<title>VELMAN — Digital Studio</title>
+<style>
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#070914;color:#eef3ff;line-height:1.5}button,input,textarea,select{font:inherit}button{cursor:pointer}.wrap{width:min(1120px,92%);margin:auto}nav{position:sticky;top:0;z-index:50;background:rgba(7,9,20,.94);backdrop-filter:blur(12px);border-bottom:1px solid #202641}.nav{min-height:70px;display:flex;align-items:center;justify-content:space-between;gap:20px}.logo{font-weight:900;font-size:25px;letter-spacing:4px}.logo span{color:#63b3ff}.links{display:flex;gap:20px;flex-wrap:wrap}.links a{color:#aeb8d0;text-decoration:none;font-size:14px}.links a:hover{color:#fff}.hero{padding:90px 0 70px;background:radial-gradient(circle at 75% 20%,#1c2b5d 0,#070914 45%)}.badge{display:inline-block;border:1px solid #34446f;border-radius:999px;padding:7px 12px;color:#91caff;font-size:12px;letter-spacing:1px}.hero h1{font-size:clamp(45px,8vw,84px);line-height:.95;max-width:850px;margin:20px 0}.grad{background:linear-gradient(90deg,#fff,#75bfff,#a978ff);color:transparent;background-clip:text;-webkit-background-clip:text}.hero p{max-width:680px;color:#aeb8d0;font-size:17px}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}.btn{border:0;border-radius:10px;padding:12px 17px;font-weight:800}.primary{background:linear-gradient(90deg,#3198ff,#805cff);color:#fff}.secondary{background:#11182c;border:1px solid #2d3858;color:#dce6ff}.btn:hover{transform:translateY(-1px)}section{padding:72px 0}.title{font-size:34px;margin:0 0 8px}.sub{color:#8995b2;margin:0 0 25px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.card,.panel,.project,.step{background:#0d1325;border:1px solid #222d4b;border-radius:16px;padding:21px}.card p,.project p{color:#9aa5bd;font-size:14px}.portal{margin-top:45px}.portal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:15px}.process{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}.step b{display:block;color:#75bcff;margin-bottom:8px}.portfolio{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.tag{color:#81c3ff;font-size:12px}.contact{display:grid;grid-template-columns:1fr 1fr;gap:20px}form{display:grid;gap:12px}input,textarea,select{width:100%;padding:13px;background:#090e1d;color:#fff;border:1px solid #2a3553;border-radius:9px;outline:0}textarea{min-height:120px;resize:vertical}footer{border-top:1px solid #202641;padding:30px 0;color:#77839f}.modal{display:none;position:fixed;inset:0;z-index:100;background:rgba(0,0,0,.75);padding:20px;overflow:auto;align-items:center;justify-content:center}.modal.show{display:flex}.modalbox{width:min(500px,100%);background:#0d1325;border:1px solid #2c395b;border-radius:18px;padding:25px}.modalhead{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}.close{background:transparent;border:0;color:#9ba7c0;font-size:25px}.dash{display:none;min-height:100vh;background:#080b17;padding:45px 0}.dash.show{display:block}.dashhead{display:flex;justify-content:space-between;align-items:center;gap:15px;margin-bottom:25px}.dashgrid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.item{background:#0a1020;border:1px solid #263251;border-radius:12px;padding:15px;margin-top:10px}.small{font-size:12px;color:#7f8ca9}.notice{padding:12px;border-radius:9px;background:#111b34;color:#a8cfff;margin-bottom:15px}.hidden{display:none!important}.filebox{padding:14px;border:1px dashed #3a4b72;border-radius:12px;background:#0a1020}.filebox input[type=file]{padding:10px}.filemeta{font-size:12px;color:#8f9bb5;margin-top:7px;word-break:break-word}.filepreview{margin-top:12px;border:1px solid #263251;border-radius:12px;overflow:hidden;background:#080d1b}.filepreview img,.filepreview video{display:block;width:100%;max-height:260px;object-fit:contain}.filepreview iframe{display:block;width:100%;height:300px;border:0}.file-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}@media(max-width:800px){.nav{align-items:flex-start;flex-direction:column;padding:15px 0}.grid,.portal-grid,.portfolio,.dashgrid,.contact{grid-template-columns:1fr}.process{grid-template-columns:1fr 1fr}}@media(max-width:480px){.process{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav><div class="wrap nav"><a class="logo" href="#home">VEL<span>MAN</span></a><div class="links"><a href="#services">Services</a><a href="#portfolio">Portfolio</a><a href="#process">Process</a><a href="#contact">Contact</a></div></div></nav>
+<main id="site">
+<section class="hero" id="home"><div class="wrap"><span class="badge">AI • DESIGN • DIGITAL • DEVELOPMENT</span><h1>TURN IDEAS <span class="grad">INTO REALITY.</span></h1><p>VELMAN is a digital creative community focused on design, websites, AI-powered content, UI/UX and interactive digital projects.</p><div class="actions"><button class="btn primary" onclick="openModal('userModal')">User Login</button><button class="btn secondary" onclick="openModal('ownerModal')">Owner Login</button><button class="btn secondary" onclick="openModal('registerModal')">Create Account</button></div><div class="portal"><h2>VELMAN Portal</h2><div class="portal-grid"><div class="card"><h3>USER LOGIN</h3><p>Access your account and project requests.</p><button class="btn primary" onclick="openModal('userModal')">Enter Dashboard</button></div><div class="card"><h3>OWNER LOGIN</h3><p>Manage projects and the public portfolio.</p><button class="btn primary" onclick="openModal('ownerModal')">Enter Dashboard</button></div><div class="card"><h3>CREATE ACCOUNT</h3><p>Create your VELMAN account with secure cloud authentication.</p><button class="btn secondary" onclick="openModal('registerModal')">Create Account</button></div></div></div></div></section>
+<section id="services"><div class="wrap"><h2 class="title">Our Services</h2><p class="sub">Creative and digital services under the VELMAN studio.</p><div class="grid"><div class="card"><h3>VELMAN CREATE</h3><p>Logo design, branding, posters, thumbnails and social graphics.</p></div><div class="card"><h3>VELMAN MOTION</h3><p>AI advertisements, animation, motion graphics and promotional content.</p></div><div class="card"><h3>VELMAN WEB</h3><p>Landing pages, business websites and responsive development.</p></div><div class="card"><h3>VELMAN UX</h3><p>UI/UX design, wireframes, prototypes and design systems.</p></div><div class="card"><h3>VELMAN LABS</h3><p>Game development, interactive experiences and digital experiments.</p></div><div class="card"><h3>CUSTOM DIGITAL</h3><p>Custom digital solutions based on an approved project brief.</p></div></div></div></section>
+<section id="portfolio"><div class="wrap"><h2 class="title">Public Portfolio</h2><p class="sub">Published projects appear here.</p><div id="portfolioGrid" class="portfolio"></div></div></section>
+<section id="process"><div class="wrap"><h2 class="title">Our Process</h2><p class="sub">A simple project workflow.</p><div class="process"><div class="step"><b>01 — REQUEST</b>Tell us what you need.</div><div class="step"><b>02 — BRIEF</b>Define scope and requirements.</div><div class="step"><b>03 — CREATE</b>Design and development.</div><div class="step"><b>04 — REVIEW</b>Test and refine.</div><div class="step"><b>05 — DELIVERY</b>Final approved project.</div></div></div></section>
+<section id="contact"><div class="wrap"><h2 class="title">Start a Project</h2><p class="sub">Send a project request through the VELMAN portal.</p><div class="contact"><div class="panel"><h3>VELMAN</h3><p class="sub">Working hours: 6:00 PM – 10:00 PM</p><p class="sub">WhatsApp: +91 93507 624040</p><p class="sub">AI Automation Message Support available.</p></div><div class="panel"><form onsubmit="publicRequest(event)"><input id="pn" placeholder="Your name" required><input id="pc" placeholder="Contact information" required><select id="ps" required><option value="">Select service</option><option>Logo / Branding</option><option>Poster / Graphic Design</option><option>Website</option><option>UI/UX</option><option>AI Advertisement</option><option>Animation</option><option>Game Development</option><option>Custom Digital</option></select><textarea id="pm" placeholder="Describe your project" required></textarea><button class="btn primary">Submit Project Request</button></form></div></div></div></section>
+</main>
+
+<div class="modal" id="userModal"><div class="modalbox"><div class="modalhead"><h2>User Login</h2><button class="close" onclick="closeModal('userModal')">×</button></div><form onsubmit="userLogin(event)"><input id="ul" type="email" placeholder="Email" required><input id="up" type="password" placeholder="Password" required><button class="btn primary">Enter Dashboard</button></form></div></div>
+<div class="modal" id="ownerModal"><div class="modalbox"><div class="modalhead"><h2>Owner Login</h2><button class="close" onclick="closeModal('ownerModal')">×</button></div><form onsubmit="ownerLogin(event)"><input id="oid" placeholder="Owner ID or email" autocomplete="username" required><input id="opw" type="password" placeholder="Owner password" autocomplete="current-password" required><button type="submit" class="btn primary">Enter Dashboard</button></form><p class="small">You can enter your VELMAN Owner ID (for example <b>VLM-ARMAN-001</b>) or the owner email connected to Supabase Auth.</p></div></div>
+<div class="modal" id="registerModal"><div class="modalbox"><div class="modalhead"><h2>Create Account</h2><button class="close" onclick="closeModal('registerModal')">×</button></div><form onsubmit="register(event)"><input id="rn" placeholder="Your name" required><input id="re" placeholder="Username / email" required><input id="rp" type="password" placeholder="Password" required><button class="btn primary">Create Account</button></form></div></div>
+
+<section id="userDash" class="dash"><div class="wrap"><div class="dashhead"><div><span class="badge">USER PORTAL</span><h2 id="uw">User Dashboard</h2></div><button class="btn secondary" onclick="logout()">Logout</button></div><div class="dashgrid"><div class="panel"><h3>Submit a Project</h3><form onsubmit="userRequest(event)" style="margin-top:15px"><input id="ut" placeholder="Project title" required><select id="us" required><option value="">Select service</option><option>Logo / Branding</option><option>Poster / Graphic Design</option><option>Website</option><option>UI/UX</option><option>AI Advertisement</option><option>Animation</option><option>Game Development</option><option>Custom Digital</option></select><textarea id="ud" placeholder="Project description" required></textarea><button class="btn primary">Send Request</button></form></div><div class="panel"><h3>My Requests</h3><div id="myRequests"></div></div></div></div></section>
+<section id="ownerDash" class="dash"><div class="wrap"><div class="dashhead"><div><span class="badge">OWNER PORTAL</span><h2 id="ow">Owner Dashboard</h2></div><button class="btn secondary" onclick="logout()">Logout</button></div><div class="notice">Manage portfolio projects and review incoming requests. Projects and portfolio files are stored in Supabase Cloud. When you publish a project, every visitor can see it from the public portfolio.</div><div class="dashgrid"><div class="panel"><h3>Add Portfolio Project</h3><form onsubmit="addProject(event)" style="margin-top:15px"><input id="pt" placeholder="Project title" required><select id="pcat" required><option value="">Category</option><option>VELMAN CREATE</option><option>VELMAN MOTION</option><option>VELMAN WEB</option><option>VELMAN UX</option><option>VELMAN LABS</option><option>CUSTOM DIGITAL</option></select><textarea id="pd" placeholder="Project description" required></textarea><div class="filebox"><b>Project File</b><p class="small" style="margin:5px 0 10px">Upload the actual project file. It will be stored in VELMAN Cloud.</p><input id="projectFile" type="file" accept="image/*,video/*,audio/*,application/pdf,.zip,.rar,.7z,.html,.css,.js,.json,.txt,.doc,.docx,.ppt,.pptx,.xls,.xlsx" required><div id="projectFileMeta" class="filemeta">No file selected.</div></div><button class="btn primary">Upload &amp; Add Project</button></form></div><div class="panel"><h3>Incoming Requests</h3><div id="allRequests"></div></div></div><div class="panel" style="margin-top:18px"><h3>Portfolio Manager</h3><div id="manage"></div></div></div></section>
+<footer><div class="wrap"><strong>VELMAN</strong> — AI • DESIGN • DIGITAL • DEVELOPMENT<br>Working hours: 6:00 PM – 10:00 PM · WhatsApp: +91 93507 624040</div></footer>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+/* ==============================
+   VELMAN CLOUD CONFIG
+   Replace ONLY these two values.
+   Never put a Supabase service-role/secret key here.
+   Owner ID email mapping is configured just below.
+================================ */
+const SUPABASE_URL = 'YOUR_SUPABASE_PROJECT_URL';
+const SUPABASE_PUBLISHABLE_KEY = 'YOUR_SUPABASE_PUBLISHABLE_KEY';
+const STORAGE_BUCKET = 'portfolio';
+const MAX_FILE_SIZE = 6 * 1024 * 1024; // 6 MB: browser-friendly standard upload limit
+
+// VELMAN Owner ID -> Supabase Auth email mapping.
+// Replace the two placeholder emails with the SAME emails used for the
+// Arman/Kush Supabase Auth accounts. Do not put passwords here.
+const OWNER_LOGIN_MAP = {
+  'VLM-ARMAN-001': 'YOUR_ARMAN_OWNER_EMAIL',
+  'VLM-KUSH-001': 'YOUR_KUSH_OWNER_EMAIL'
+};
+
+const $ = id => document.getElementById(id);
+const cloudReady = SUPABASE_URL.startsWith('https://') && !SUPABASE_URL.includes('YOUR_') && !SUPABASE_PUBLISHABLE_KEY.includes('YOUR_');
+const sb = cloudReady ? window.supabase.createClient(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY) : null;
+
+function openModal(id){$(id).classList.add('show')}
+function closeModal(id){$(id).classList.remove('show')}
+function closeAll(){document.querySelectorAll('.modal').forEach(x=>x.classList.remove('show'))}
+function showDash(id){$('site').classList.add('hidden');document.querySelector('footer').classList.add('hidden');$('userDash').classList.remove('show');$('ownerDash').classList.remove('show');$(id).classList.add('show');scrollTo(0,0)}
+function home(){$('site').classList.remove('hidden');document.querySelector('footer').classList.remove('hidden');$('userDash').classList.remove('show');$('ownerDash').classList.remove('show');scrollTo(0,0);renderPortfolio()}
+function requireCloud(){if(!cloudReady){alert('VELMAN Cloud is not configured yet. Add your Supabase Project URL and Publishable key in index.html.');return false}return true}
+function msg(error,fallback){console.error(error);return error?.message||fallback}
+function formatBytes(n){if(!n)return '0 B';const u=['B','KB','MB','GB'];let i=Math.floor(Math.log(n)/Math.log(1024));return `${(n/Math.pow(1024,i)).toFixed(i?1:0)} ${u[i]}`}
+function esc(v){return String(v??'').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;').replaceAll("'",'&#039;')}
+function fileKind(type,name){const ext=(name||'').split('.').pop().toLowerCase();if(type?.startsWith('image/'))return 'image';if(type?.startsWith('video/'))return 'video';if(type?.startsWith('audio/'))return 'audio';if(type==='application/pdf'||ext==='pdf')return 'pdf';return 'download'}
+function publicFileUrl(path){if(!sb||!path)return '';return sb.storage.from(STORAGE_BUCKET).getPublicUrl(path).data.publicUrl}
+function projectPreview(p){const url=publicFileUrl(p.file_path);if(!url)return '';const kind=fileKind(p.file_type,p.file_name);if(kind==='image')return `<div class="filepreview"><img src="${esc(url)}" alt="${esc(p.title)}"></div>`;if(kind==='video')return `<div class="filepreview"><video src="${esc(url)}" controls></video></div>`;if(kind==='audio')return `<div class="filepreview"><audio src="${esc(url)}" controls style="width:100%;padding:12px"></audio></div>`;if(kind==='pdf')return `<div class="filepreview"><iframe src="${esc(url)}" title="${esc(p.file_name)}"></iframe></div>`;return `<div class="filepreview" style="padding:18px"><b>Project file:</b> ${esc(p.file_name)}<br><span class="small">${formatBytes(p.file_size)}</span></div>`}
+function fileButton(p){const url=publicFileUrl(p.file_path);return url?`<div class="file-actions"><a class="btn secondary" href="${esc(url)}" target="_blank" rel="noopener">Open / Download</a></div>`:''}
+
+async function getSession(){if(!requireCloud())return null;const {data,error}=await sb.auth.getSession();if(error)console.error(error);return data.session}
+async function getProfile(userId){const {data,error}=await sb.from('profiles').select('id,name,role').eq('id',userId).maybeSingle();if(error)throw error;return data}
+
+async function register(e){
+  e.preventDefault(); if(!requireCloud())return;
+  const n=$('rn').value.trim(),em=$('re').value.trim().toLowerCase(),pw=$('rp').value;
+  if(pw.length<8)return alert('Password must be at least 8 characters.');
+  const {data,error}=await sb.auth.signUp({email:em,password:pw,options:{data:{name:n}}});
+  if(error)return alert(msg(error,'Could not create account.'));
+  e.target.reset();closeModal('registerModal');
+  if(data.session){alert('Account created. You can now use the VELMAN User Dashboard.');await openUser();}
+  else {alert('Account created. Check your email if confirmation is enabled, then log in.');openModal('userModal');}
+}
+
+async function userLogin(e){
+  e.preventDefault();if(!requireCloud())return;
+  const em=$('ul').value.trim().toLowerCase(),pw=$('up').value;
+  const {data,error}=await sb.auth.signInWithPassword({email:em,password:pw});
+  if(error)return alert(msg(error,'Invalid email or password.'));
+  closeAll();await routeAfterLogin(data.user);
+}
+
+async function ownerLogin(e){
+  e.preventDefault();if(!requireCloud())return;
+  const login=$('oid').value.trim(),pw=$('opw').value;
+  const key=login.toUpperCase();
+  const mapped=OWNER_LOGIN_MAP[key];
+  const em=(mapped && !mapped.includes('YOUR_')) ? mapped.trim().toLowerCase() : login.toLowerCase();
+  if(!em.includes('@'))return alert('Enter a valid Owner ID that is mapped to a Supabase owner email, or enter the owner email directly.');
+  const {data,error}=await sb.auth.signInWithPassword({email:em,password:pw});
+  if(error)return alert(msg(error,'Invalid owner email or password.'));
+  const profile=await getProfile(data.user.id).catch(err=>null);
+  if(!profile||profile.role!=='owner'){
+    await sb.auth.signOut();
+    return alert('This account is not configured as a VELMAN owner.');
+  }
+  e.target.reset();closeAll();await openOwner();
+}
+
+async function routeAfterLogin(user){
+  const profile=await getProfile(user.id).catch(()=>null);
+  if(profile?.role==='owner')await openOwner();else await openUser();
+}
+async function openUser(){
+  const session=await getSession();if(!session)return openModal('userModal');
+  const profile=await getProfile(session.user.id).catch(()=>null);
+  $('uw').textContent='Welcome, '+(profile?.name||session.user.user_metadata?.name||session.user.email.split('@')[0]);
+  showDash('userDash');await renderUser();
+}
+async function openOwner(){
+  const session=await getSession();if(!session)return openModal('ownerModal');
+  const profile=await getProfile(session.user.id).catch(()=>null);
+  if(profile?.role!=='owner')return openUser();
+  $('ow').textContent='Welcome, '+(profile.name||session.user.email.split('@')[0]);
+  showDash('ownerDash');await renderManage();await renderAllRequests();
+}
+async function logout(){if(sb)await sb.auth.signOut();home()}
+
+async function userRequest(e){
+  e.preventDefault();if(!requireCloud())return;
+  const session=await getSession();if(!session)return openModal('userModal');
+  const a={user_id:session.user.id,name:'',contact:session.user.email,title:$('ut').value.trim(),service:$('us').value,description:$('ud').value.trim(),status:'New'};
+  // Keep the existing VELMAN UI while storing the authenticated user's email as contact.
+  a.name=(await getProfile(session.user.id).catch(()=>null))?.name||session.user.email;
+  const {error}=await sb.from('requests').insert(a);
+  if(error)return alert(msg(error,'Could not send request.'));
+  e.target.reset();await renderUser();alert('Project request sent to VELMAN.');
+}
+
+async function publicRequest(e){
+  e.preventDefault();if(!requireCloud())return;
+  const a={user_id:null,name:$('pn').value.trim(),contact:$('pc').value.trim(),title:'Public project request',service:$('ps').value,description:$('pm').value.trim(),status:'New'};
+  const {error}=await sb.from('requests').insert(a);
+  if(error)return alert(msg(error,'Could not submit request.'));
+  e.target.reset();alert('Project request submitted.');
+}
+
+async function addProject(e){
+  e.preventDefault();if(!requireCloud())return;
+  const session=await getSession();if(!session)return openModal('ownerModal');
+  const profile=await getProfile(session.user.id).catch(()=>null);if(profile?.role!=='owner')return alert('Owner access required.');
+  const file=$('projectFile').files[0];
+  if(!file)return alert('Please choose a project file.');
+  if(file.size>MAX_FILE_SIZE)return alert(`For this GitHub Pages version, please keep portfolio files at ${formatBytes(MAX_FILE_SIZE)} or smaller.`);
+  const projectId=crypto.randomUUID();
+  const safeName=file.name.replace(/[^a-zA-Z0-9._-]/g,'_');
+  const filePath=`${session.user.id}/${projectId}-${safeName}`;
+  const row={id:projectId,title:$('pt').value.trim(),category:$('pcat').value,description:$('pd').value.trim(),owner_id:session.user.id,file_path:filePath,file_name:file.name,file_type:file.type||'application/octet-stream',file_size:file.size,published:false};
+  const {error:insertError}=await sb.from('projects').insert(row);
+  if(insertError)return alert(msg(insertError,'Could not create project record.'));
+  const {error:uploadError}=await sb.storage.from(STORAGE_BUCKET).upload(filePath,file,{contentType:file.type||'application/octet-stream',upsert:false});
+  if(uploadError){await sb.from('projects').delete().eq('id',projectId);return alert(msg(uploadError,'Could not upload the project file.'))}
+  e.target.reset();$('projectFileMeta').textContent='No file selected.';await renderManage();await renderPortfolio();alert('Project uploaded as a draft. Publish it from Portfolio Manager.');
+}
+
+async function toggle(id){
+  if(!requireCloud())return;const session=await getSession();if(!session)return;
+  const {data:p,error:getErr}=await sb.from('projects').select('published').eq('id',id).eq('owner_id',session.user.id).single();
+  if(getErr||!p)return alert('Project not found or access denied.');
+  const {error}=await sb.from('projects').update({published:!p.published}).eq('id',id).eq('owner_id',session.user.id);
+  if(error)return alert(msg(error,'Could not change publish status.'));
+  await renderManage();await renderPortfolio();
+}
+
+async function del(id){
+  if(!requireCloud()||!confirm('Delete this project and its stored file?'))return;
+  const session=await getSession();if(!session)return;
+  const {data:p,error:getErr}=await sb.from('projects').select('file_path').eq('id',id).eq('owner_id',session.user.id).single();
+  if(getErr||!p)return alert('Project not found or access denied.');
+  const {error:storageErr}=await sb.storage.from(STORAGE_BUCKET).remove([p.file_path]);
+  if(storageErr)console.warn('Storage delete warning:',storageErr);
+  const {error}=await sb.from('projects').delete().eq('id',id).eq('owner_id',session.user.id);
+  if(error)return alert(msg(error,'Could not delete project.'));
+  await renderManage();await renderPortfolio();
+}
+
+async function renderPortfolio(){
+  const grid=$('portfolioGrid');
+  if(!cloudReady){grid.innerHTML='<div class="project"><h3>VELMAN Cloud setup pending</h3><p>Add your Supabase Project URL and Publishable key to activate the public cloud portfolio.</p></div>';return}
+  const {data:a,error}=await sb.from('projects').select('*').eq('published',true).order('created_at',{ascending:false});
+  if(error){console.error(error);grid.innerHTML='<div class="project"><h3>Portfolio temporarily unavailable</h3><p>Please try again shortly.</p></div>';return}
+  if(!a?.length){grid.innerHTML='<div class="project"><h3>No published projects yet</h3><p>Owner-published projects will appear here.</p></div>';return}
+  grid.innerHTML=a.map(p=>`<article class="project"><span class="tag">${esc(p.category)}</span><h3>${esc(p.title)}</h3><p>${esc(p.description)}</p>${projectPreview(p)}<div class="small">${esc(p.id.slice(0,8))} · VELMAN</div>${fileButton(p)}</article>`).join('');
+}
+
+async function renderManage(){
+  const box=$('manage');if(!cloudReady){box.innerHTML='<p class="small">Cloud setup pending.</p>';return}
+  const session=await getSession();if(!session){box.innerHTML='<p class="small">Owner login required.</p>';return}
+  const {data:a,error}=await sb.from('projects').select('*').eq('owner_id',session.user.id).order('created_at',{ascending:false});
+  if(error){box.innerHTML=`<p class="small">${esc(error.message)}</p>`;return}
+  if(!a?.length){box.innerHTML='<p class="small">No projects yet.</p>';return}
+  box.innerHTML=a.map(p=>`<div class="item"><b>${esc(p.title)}</b><div class="small">${esc(p.category)} · ${p.published?'PUBLISHED':'DRAFT'}</div><p>${esc(p.description)}</p><div class="small">File: ${esc(p.file_name||'No file')} · ${p.file_size?formatBytes(p.file_size):''}</div><div class="file-actions"><button class="btn primary" onclick="toggle('${p.id}')">${p.published?'Unpublish':'Publish'}</button><a class="btn secondary" href="${esc(publicFileUrl(p.file_path))}" target="_blank" rel="noopener">Open File</a><button class="btn secondary" onclick="del('${p.id}')">Delete</button></div></div>`).join('');
+}
+
+async function renderUser(){
+  const box=$('myRequests');if(!cloudReady){box.innerHTML='<p class="small">Cloud setup pending.</p>';return}
+  const session=await getSession();if(!session)return;
+  const {data:a,error}=await sb.from('requests').select('*').eq('user_id',session.user.id).order('created_at',{ascending:false});
+  if(error){box.innerHTML=`<p class="small">${esc(error.message)}</p>`;return}
+  box.innerHTML=a?.length?a.map(r=>`<div class="item"><b>${esc(r.title)}</b><div class="small">${esc(r.service)} · ${esc(r.status)}</div><p>${esc(r.description)}</p></div>`).join(''):'<p class="small">No requests yet.</p>';
+}
+
+async function renderAllRequests(){
+  const box=$('allRequests');if(!cloudReady){box.innerHTML='<p class="small">Cloud setup pending.</p>';return}
+  const {data:a,error}=await sb.from('requests').select('*').order('created_at',{ascending:false});
+  if(error){box.innerHTML=`<p class="small">${esc(error.message)}</p>`;return}
+  box.innerHTML=a?.length?a.map(r=>`<div class="item"><b>${esc(r.title)}</b><div class="small">${esc(r.service)} · ${esc(r.status)}</div><p><b>${esc(r.name)}</b> — ${esc(r.contact)}</p><p>${esc(r.description)}</p></div>`).join(''):'<p class="small">No incoming requests.</p>';
+}
+
+$('projectFile')?.addEventListener('change',()=>{const f=$('projectFile').files[0];$('projectFileMeta').textContent=f?`${f.name} · ${formatBytes(f.size)}${f.size>MAX_FILE_SIZE?' · TOO LARGE':''}`:'No file selected.'});
+document.querySelectorAll('.modal').forEach(m=>m.addEventListener('click',e=>{if(e.target===m)m.classList.remove('show')}));
+
+if(cloudReady){
+  sb.auth.onAuthStateChange((event,session)=>{if(event==='SIGNED_OUT')home();});
+}
+renderPortfolio();
+window.addEventListener('load',async()=>{if(!cloudReady)return;const session=await getSession();if(session)await routeAfterLogin(session.user);});
+</script>
+</body>
+</html>
